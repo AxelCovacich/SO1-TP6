@@ -94,7 +94,7 @@ int main(){
 
     printf("Promedio de valid_samples: %d\n",promedio);
 
-    if (munmap(muestras, binary_stats.st_size) == -1) {
+    if (munmap(muestras, binary_stats.st_size) == -1) {     //libera la memoria y se cierra el file descriptor
         perror("munmap Fail");
         close(data_fd);
         return 1;
